@@ -16,3 +16,12 @@ function narcissistic(value) {
     return result
   }
   console.log (narcissistic(7));
+// колличество  пассажиров из массива [[],[]]
+var number = function(busStops){
+   let passengers=0; 
+   busStops.forEach(function (item) {
+     passengers+=item[0]-item[1];
+    
+   });
+    return passengers
+}
