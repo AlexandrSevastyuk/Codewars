@@ -25,3 +25,12 @@ var number = function(busStops){
    });
     return passengers
 }
+// pangrams search
+function isPangram(string){
+    let pangram = new Set(string.toLowerCase().replace(/[^A-Za-z]/g,""));
+    if (pangram.size==26) {
+        return true
+    } else {
+        return false
+    };
+  }
