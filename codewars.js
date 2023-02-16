@@ -35,14 +35,19 @@ function isPangram(string){
     };
   }
 
-// Are they the "same"?
-let a = [121, 144, 19, 161, 19, 144, 19, 11]; 
-b = [121, 14641, 20736, 361, 25921, 361, 20736, 361];
-ans=true;
+// Are they the "same?
+//
 function comp(array1, array2){
-    array1.forEach((element) => { 
-     ans&&=array2.includes(element**2)
-    });
-    return ans
-  }
-  console.log (comp(a,b));
+         if (Array.isArray(array1)&&Array.isArray(array2)) {
+       let ans=true;
+                                                          
+     array1.forEach((element) => { 
+      ans&&=array2.includes(element**2);
+      array2.splice(array2.indexOf((element**2)),1)
+      console.log (array2)
+     });
+   
+     return ans} else {
+       return false
+     }
+   }
